@@ -1,0 +1,4 @@
+interface:
+  display_name: "알고리즘 Velog 포스트"
+  short_description: "알고리즘 풀이를 학습 회고형 Velog 글로 정리"
+  default_prompt: "Use $velog-post to turn my algorithm solutions into a Korean Velog study post."
