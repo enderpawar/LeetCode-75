@@ -4,13 +4,17 @@ Use this pattern as a flexible house style. Omit empty subsections instead of fo
 
 ## Title
 
-Use this form when appropriate:
+Use this form:
 
 ```text
-[알고리즘 스터디 N주차] 학습 주제를 드러내는 제목
+[Series Day N] Algorithm1, Algorithm2
 ```
 
-Name the shared concept rather than listing problem titles only.
+Name the algorithms or data structures most directly related to that day's solved problems in English. Do not use problem titles or a descriptive Korean theme. For example:
+
+```text
+[LeetCode 75 Day 7] LinkedList, Queue
+```
 
 ## Introduction
 

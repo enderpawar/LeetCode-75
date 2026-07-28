@@ -34,6 +34,7 @@ Write a publish-ready Korean Markdown post that sounds like the learner's own st
 ## Output Requirements
 
 - Return only the polished post unless the user asks for review notes or alternatives.
+- Format the title as `[Series Day N] Algorithm1, Algorithm2`, using the English names of the algorithms or data structures most directly related to that day's solved problems. Do not use a descriptive Korean theme in the title. For example, use `[LeetCode 75 Day 7] LinkedList, Queue` for a day covering linked-list and queue problems.
 - Use natural Korean prose and Markdown suitable for direct pasting into Velog.
 - Prefer paragraphs over excessive bullets. Use numbered steps only when they clarify an algorithm.
 - Keep beginner-oriented explanations concrete: explain what syntax does in the code at hand.
@@ -45,7 +46,7 @@ Write a publish-ready Korean Markdown post that sounds like the learner's own st
 
 Before returning the post, confirm:
 
-- The title reflects the shared learning theme.
+- The title lists the day's relevant algorithms or data structures in English.
 - The introduction explains the study context without exaggeration.
 - Each problem section contains the task, code, core idea, and actual stumbling points.
 - The Q&A resolves genuine confusions rather than padding the post.
