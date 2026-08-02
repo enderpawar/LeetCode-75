@@ -1,0 +1,22 @@
+"""
+공간복잡도 최적화 버전 O(N) -> O(1)
+- arr 전체에 사용하지 않고 3개의 변수만 기억하며 슬라이딩하기 때문에 
+N의 크기와 상관없이 메모리 크기를 일정하게 사용한다.
+"""
+class Solution(object):
+
+    def tribonacci(self, n):
+        if n == 0:
+            return 0
+        if n <= 2:
+            return 1
+
+        # T_0, T_1, T_2
+        a, b, c = 0, 1, 1
+
+        for _ in range(3, n + 1):
+            # 세 변수를 한 칸씩 슬라이딩
+            a, b, c = b, c, a + b + c
+
+        return c
+

@@ -1,0 +1,61 @@
+"""
+## 문제 번역
+
+**1137. N번째 트리보나치 수 (N-th Tribonacci Number)**
+
+트리보나치 수열 $T_n$은 다음과 같이 정의됩니다:
+
+* $T_0 = 0$
+* $T_1 = 1$
+* $T_2 = 1$
+* $T_{n+3} = T_n + T_{n+1} + T_{n+2}$ ($n \ge 0$)
+
+정수 $n$이 주어졌을 때, $T_n$의 값을 반환하는 함수를 작성하세요.
+
+---
+
+### 예시
+
+**예시 1:**
+
+* **입력:** `n = 4`
+* **출력:** `4`
+* **설명:**
+* $T_3 = T_0 + T_1 + T_2 = 0 + 1 + 1 = 2$
+* $T_4 = T_1 + T_2 + T_3 = 1 + 1 + 2 = 4$
+
+
+
+**예시 2:**
+
+* **입력:** `n = 25`
+* **출력:** `1389537`
+
+---
+
+### 제약 조건
+
+* $0 \le n \le 37$
+* 정답은 32비트 정수 범위 내에 포함됨이 보장됩니다 ($T_n \le 2^{31} - 1$).
+
+# 의사코드
+점화식 어차피 알려주네. T_n+3 = T_n + T_n+1 + T_n+2 메모이제이션으로 함녀 되겠다
+"""
+
+class Solution(object):
+
+    dp = [0,1,1]
+
+    def tribonacci(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        if n < len(Solution.dp):
+            return Solution.dp[n]
+        
+        Tn = self.tribonacci(n-1) + self.tribonacci(n-2) + self.tribonacci(n-3)
+        self.dp.append(Tn)
+        return Tn
+
+print(Solution().tribonacci(3))
