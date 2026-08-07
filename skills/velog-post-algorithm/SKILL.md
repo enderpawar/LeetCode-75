@@ -1,5 +1,5 @@
 ---
-name: velog-post
+name: velog-post-algorithm
 description: Convert one or more algorithm problem solutions into a Korean Velog study post with a personal retrospective voice, verified solution logic, code, complexity analysis, stumbling points, and self-answered questions. Use when the user asks to write, revise, or format a coding-test, LeetCode, Baekjoon, or algorithm study note for Velog, especially from solution files, code snippets, debugging conversations, or weekly study notes.
 ---
 
@@ -43,6 +43,7 @@ Write a publish-ready Korean Markdown post that sounds like the learner's own st
 - End every problem section with a `### 더 개선한다면` reflection plus an improved code block, as specified in the reference. The reflection may not be replaced by a generic "이 정도면 충분하다" remark.
 - Do not add a table of contents, tags, emoji, promotional closing, or references unless requested.
 - Keep the main code block faithful to the verified solution and avoid unrelated optimization. Optimizations and rewrites belong in the improvement reflection, never folded silently into the main block.
+- For every `### 더 개선한다면` improved code block, also save it as a standalone runnable file in the same folder as the original solution file, named `<original filename without extension>-improvement.py`. Mirror the original file's structure (problem-context docstring optional, but keep it runnable with a sample input and a `print(...)` call) so it can be executed directly to verify the result.
 
 ## Quality Bar
 
