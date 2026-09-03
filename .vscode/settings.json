@@ -1,0 +1,26 @@
+{
+  // --- 언어 서버 / 인터프리터 고정 ---
+  "python.languageServer": "Pylance",
+  "python.defaultInterpreterPath": "C:/Users/jinwoo/AppData/Local/Programs/Python/Python313/python.exe",
+
+  // --- Pylance 분석 동작 ---
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.diagnosticMode": "openFilesOnly",
+  "python.analysis.indexing": true,
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.completeFunctionParens": true,
+
+  // --- 파이썬 파일에서 자동완성이 확실히 뜨도록 ---
+  "[python]": {
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.wordBasedSuggestions": "off",
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": "off",
+      "strings": "off"
+    }
+  }
+}
