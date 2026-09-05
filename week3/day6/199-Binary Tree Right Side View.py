@@ -79,22 +79,20 @@ def build_tree(values):
     return root
 
 
+
 class Solution:
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
-
-        if root is None:
-            return []
 
         result = []
         queue = deque([root])
 
-        while queue:
+        while queue: # 큐에 노드가 남아있는한 계속 실행
             level_size = len(queue)
 
-            for i in range(level_size): # 해당 레벨에 대해서 pop을 실시하는건데. 
+            for i in range(level_size): # 현재 레벨 사이즈 만큼 순회. 이러면 맨 마지막 노드가 그거가 되겠지.
                 node = queue.popleft()
 
-                if i == level_size - 1: # 이렇게하면 최 우측의 노드를 뽑아올 수 있다.
+                if i == level_size - 1:  #노드 인덱스가 마지막 인덱스 (최우측 노드) 라면?
                     result.append(node.val)
 
                 if node.left:
@@ -104,24 +102,6 @@ class Solution:
                     queue.append(node.right)
 
         return result
-
-class Solution:
-    def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
-
-        result = []
-        queue = deque([root])
-
-        while queue:
-            level_size = len(queue)
-
-            for i in range(level_size):
-                node = queue.popleft()
-
-                if i == level_size - 1:
-                    result.append(node.val)
-
-                if node.left: #만약 node.left가존재한다면
-                    queue.append(node.left) # 왼쪽 노드 넣어주기 
             
 root = build_tree([1, 2, 3, None, 5, None, 4])
 print(Solution().rightSideView(root))
